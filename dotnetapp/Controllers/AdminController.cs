@@ -60,6 +60,8 @@ namespace dotnetapp.Controllers
             if(ModelState.IsValid)
             {
                 Player players = _context.Players.Find(player.Id);
+                players.Id = player.Id;
+
                 players.Age = player.Age;
                 players.Name = player.Name;
                 players.Category = player.Category;
