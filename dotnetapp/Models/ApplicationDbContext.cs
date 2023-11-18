@@ -1,5 +1,6 @@
 ﻿using Microsoft.EntityFrameworkCore;
-// using dotnetapp.Models;
+ using dotnetapp.Models;
+ using System.Collections.Generic;
  
 namespace dotnetapp.Models
 {

@@ -53,23 +53,21 @@ namespace dotnetapp.Controllers
        
         [HttpPut]
         [Route("EditMovie/{id}")]
-        public IActionResult PutPlayer(int id ,Player player)
+        public IActionResult PutPlayer(Int32 id ,Player player)
         {
             var data = _context.Players.Find(id);
  
-            if(ModelState.IsValid)
-            {
+            
                 Player players = _context.Players.Find(player.Id);
                 players.Id = player.Id;
 
-                players.Age = player.Age;
                 players.Name = player.Name;
-                players.Category = player.Category;
+                players.Age = player.Age;
                 players.BiddingPrice = player.BiddingPrice;
+                players.Category = player.Category;
                 _context.SaveChanges();
                 return Ok();                
-            }
-            return BadRequest("Unable to Edit Record");
+            
         }
  
         [HttpDelete]
