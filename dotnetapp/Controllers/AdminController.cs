@@ -36,8 +36,8 @@ namespace dotnetapp.Controllers
         [Route("AddMovie")]
         public IActionResult Post(Player movie)
         {
-            if(ModelState.IsValid)
-            {
+            // if(ModelState.IsValid)
+            // {
                 try
                 {
                     _context.Players.Add(movie);
@@ -47,7 +47,7 @@ namespace dotnetapp.Controllers
                 {
                     return BadRequest(ex.InnerException.Message);
                 }
-            }
+            //}
             return Created("Record Added", movie);
         }
        
