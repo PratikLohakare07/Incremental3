@@ -9,6 +9,7 @@ namespace dotnetapp.Models;
         public virtual DbSet<Player>Players {get;set;}
         public virtual DbSet<Team> Teams {get;set;}
         public virtual DbSet<User> Users {get;set;}
+        
  
         public ApplicationDbContext(){}
  
