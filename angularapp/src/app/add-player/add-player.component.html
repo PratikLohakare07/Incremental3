@@ -1,24 +1,28 @@
 <h2>Adding Player</h2>
 
 <hr>
-<form (ngSubmit)="saveData(moviedata)" #movieform="ngForm">
+<form (ngSubmit)="saveData(playerdata)" #playerform="ngForm">
 
     <div>
         <label for="name">Player Name</label>
-        <input type="text" id="name" name="name" placeholder="enter Player Name"[(ngModel)]="moviedata.name" required #name="ngModel">
+        <input type="text" id="name" name="name" placeholder="enter Player Name"[(ngModel)]="playerdata.name"  #name="ngModel">
     </div>
 
     <div>
-        <label for="rating">Rating</label>
-        <input type="text" id="rating" name="rating" placeholder="enter Rating"[(ngModel)]="moviedata.rating" #rating="ngModel" min="1" max="5" >
+        <label for="age">Age</label>
+        <input type="text" id="age" name="age" placeholder="enter Rating"[(ngModel)]="playerdata.age" #age="ngModel"  >
     </div>
 
     <div>
-        <label for="year">Year</label>
-        <input type="text" id="year" name="year" placeholder="enter year"[(ngModel)]="moviedata.yearRelease" required #yearRelease="ngModel">
+        <label for="category">Category</label>
+        <input type="text" id="category" name="category" placeholder="Catogory"[(ngModel)]="playerdata.category" #category="ngModel">
+    </div>
+    <div>
+        <label for="biddingPrice">BiddingPrice</label>
+        <input type="text" id="biddingPrice" name="biddingPrice" placeholder="BiddingPrice"[(ngModel)]="playerdata.biddingPrice" #biddingPrice="ngModel">
     </div>
     <br><br>
     <p>
-        <input type="submit" value="Save" class="btn btn-Info" [disabled]="!movieform.valid">
+        <input type="submit" value="Save" class="btn btn-Info" [disabled]="!playerform.valid">
     </p>
     </form>
