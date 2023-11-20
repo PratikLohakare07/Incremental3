@@ -70,8 +70,8 @@ namespace dotnetapp.Controllers
         try
         {
 
-                    if(ModelState.IsValid)
-                    {
+                    // if(ModelState.IsValid)
+                    // {
                         // Player player = new Player{};
 
                         Player player = _context.Players.Find(id);
@@ -80,7 +80,7 @@ namespace dotnetapp.Controllers
                         player.Category = players.Category;
                         player.BiddingPrice = players.BiddingPrice;
                         _context.SaveChanges();
-                    }
+                    //}
                     return Ok();                
         }
         catch(System.Exception ex)
