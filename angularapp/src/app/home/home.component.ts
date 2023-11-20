@@ -1,17 +1,17 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
-
 @Component({
-  selector: 'app-admin',
-  templateUrl: './admin.component.html',
-  styleUrls: ['./admin.component.css']
+  selector: 'app-home',
+  templateUrl: './home.component.html',
+  styleUrls: ['./home.component.css']
 })
-export class AdminComponent implements OnInit {
-
+export class HomeComponent implements OnInit {
+ 
   constructor(private router : Router){
     this.router.navigate(['/admin']);
   }
+ 
   ngOnInit(): void {
   }
-
+ 
 }

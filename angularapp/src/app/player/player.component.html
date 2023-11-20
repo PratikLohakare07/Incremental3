@@ -1,1 +1,30 @@
-<p>player works!</p>
+<div class="container">
+    <div class="jumbotron">
+    <h1>Player list</h1>
+    <table class="table">
+    <thead>
+    <tr>
+    <th>ID</th>
+    <th>Name</th>
+    <th>Age</th>
+    <th>Catogory</th>
+    <th>BiddingPrice</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr *ngFor = "let m of playerdata">
+    <td>{{m.id}}</td>
+    <td>{{m.name}}</td>
+    <td>{{m.age}}</td>
+    <td>{{m.category}}</td>
+    <td>{{m.biddingPrice}}</td>
+    <!-- <td>
+    <a [routerLink] = "['/find/' , m.id]">Details</a> &nbsp; &nbsp;
+    <a [routerLink] = "['/edit/' , m.id]">Edit</a> &nbsp; &nbsp;
+    <a [routerLink] = "['/delete/' , m.id]">Delete</a> &nbsp; &nbsp;
+    </td> -->
+    </tr>
+    </tbody>
+    </table>
+    </div>
+    </div>
