@@ -9,7 +9,7 @@ using dotnetapp.Models;
 namespace dotnetapp.Controllers
 {
     [ApiController]
-    [Route("[controller]")]
+    [Route("/[controller]")]
     public class TeamController : ControllerBase
     {
         private readonly ApplicationDbContext _context;
