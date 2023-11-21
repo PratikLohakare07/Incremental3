@@ -47,39 +47,39 @@ namespace dotnetapp.Controllers
             return Created("Record Added", t);
         }
        
-        [HttpPut]
-        [Route("EditMovie/{id}")]
-        public IActionResult PutTeam(int id ,Team t)
-        {
-            // var data = _context.Players.Find(id);
+        // [HttpPut]
+        // [Route("EditMovie/{id}")]
+        // public IActionResult PutTeam(int id ,Team t)
+        // {
+        //     // var data = _context.Players.Find(id);
  
-            try
-            {
+        //     try
+        //     {
                
-                        if(ModelState.IsValid)
-                        {
-                            Team teams = _context.Teams.Find(t.TeamId);
-                            // var Player = new Player
-                            // {
-                            //     Id= 1,
-                            //     Name = "John Doe",
-                            //     Age= 24,
-                            //     BiddingPrice= 25,
-                            //     Category="asd"
-                            // };
+        //                 if(ModelState.IsValid)
+        //                 {
+        //                     Team teams = _context.Teams.Find(t.TeamId);
+        //                     // var Player = new Player
+        //                     // {
+        //                     //     Id= 1,
+        //                     //     Name = "John Doe",
+        //                     //     Age= 24,
+        //                     //     BiddingPrice= 25,
+        //                     //     Category="asd"
+        //                     // };
                             
-                            teams.TeamName = t.TeamName;
+        //                     teams.TeamName = t.TeamName;
                             
-                            _context.SaveChanges();
-                            return Ok();                
-                        }
-                        return BadRequest("Unable to Edit Record");
-            }
-            catch(System.Exception ex)
-            {
-                return BadRequest(ex.Message);
-            }
-        }
+        //                     _context.SaveChanges();
+        //                     return Ok();                
+        //                 }
+        //                 return BadRequest("Unable to Edit Record");
+        //     }
+        //     catch(System.Exception ex)
+        //     {
+        //         return BadRequest(ex.Message);
+        //     }
+        // }
  
         [HttpDelete]
         [Route("DeleteTeam/{id}")]

@@ -34,13 +34,13 @@ namespace dotnetapp.Controllers
  
         [HttpPost]
         [Route("AddPlayers")]
-        public IActionResult Post(Player movie)
+        public IActionResult Post(Player p)
         {
             if(ModelState.IsValid)
             {
                 try
                 {
-                    _context.Players.Add(movie);
+                    _context.Players.Add(p);
                     _context.SaveChanges();
                 }
                 catch(System.Exception ex)
@@ -48,7 +48,7 @@ namespace dotnetapp.Controllers
                     return BadRequest(ex.InnerException.Message);
                 }
             }
-            return Created("Record Added", movie);
+            return Created("Record Added", p);
         }
        
         [HttpPut]
