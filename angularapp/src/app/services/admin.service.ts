@@ -36,7 +36,7 @@ export class AdminService {
 
 
   getTeams(): Observable<Team[]> {
-    return this.httpclient.get<Team[]>(`${this.url2}/ShowTeams`);
+    return this.httpclient.get<any[]>(this.url2+'/ShowTeams');
   }
 
   createTeam(newTeam: Team): Observable<Team> {
