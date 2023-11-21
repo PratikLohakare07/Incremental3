@@ -8,8 +8,8 @@ using dotnetapp.Models;
  
 namespace dotnetapp.Controllers
 {
-    [ApiController]
-    [Route("/[controller]")]
+    // [ApiController]
+    // [Route("/[controller]")]
     public class AdminController : ControllerBase
     {
         private readonly ApplicationDbContext _context;
