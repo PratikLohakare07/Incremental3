@@ -8,8 +8,8 @@ using dotnetapp.Models;
  
 namespace dotnetapp.Controllers
 {
-    // [ApiController]
-    // [Route("/[controller]")]
+    [ApiController]
+    [Route("/[controller]")]
     public class AdminController : ControllerBase
     {
         private readonly ApplicationDbContext _context;
@@ -19,11 +19,11 @@ namespace dotnetapp.Controllers
             _context = context;
         }
  
-        public IActionResult GetTeams()
-        {
-            // var data = _context.Players.ToList();
-            return Ok();
-        }
+        // public IActionResult GetTeams()
+        // {
+        //     var data = _context.Players.ToList();
+        //     return Ok(data);
+        // }
         [HttpGet]
         [Route("ShowPlayers")]
         public IActionResult GetPlayers()
@@ -34,13 +34,13 @@ namespace dotnetapp.Controllers
  
         [HttpPost]
         [Route("AddPlayers")]
-        public IActionResult Post(Player p)
+        public IActionResult Post(Player movie)
         {
             if(ModelState.IsValid)
             {
                 try
                 {
-                    _context.Players.Add(p);
+                    _context.Players.Add(movie);
                     _context.SaveChanges();
                 }
                 catch(System.Exception ex)
@@ -48,7 +48,7 @@ namespace dotnetapp.Controllers
                     return BadRequest(ex.InnerException.Message);
                 }
             }
-            return Created("Record Added", p);
+            return Created("Record Added", movie);
         }
        
         [HttpPut]
