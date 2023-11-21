@@ -8,9 +8,9 @@ import { AdminService } from '../services/admin.service';
   styleUrls: ['./player.component.css']
 })
 export class PlayerComponent implements OnInit {
-  players:[Player];
-  newPlayer:Player
-  biddingPrice:number=200;
+  // players:[Player];
+  // newPlayer:Player
+  // biddingPrice:number=200;
  
   playerdata:any[]=[]
   constructor(private ms:AdminService) {

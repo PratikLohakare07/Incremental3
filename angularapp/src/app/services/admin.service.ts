@@ -19,7 +19,7 @@ export class AdminService {
  
   // const newTeam: Team = { id: 3, name: 'New Team', maximumBudget: 50000 }
   url = "https://8080-bdbaddeafccbaafacbbecabcdadeafbbdcaeafe.premiumproject.examly.io/Admin"
-  url2="https://8080-bdbaddeafccbaafacbbecabcdadeafbbdcaeafe.premiumproject.examly.io/"
+  url2="https://8080-bdbaddeafccbaafacbbecabcdadeafbbdcaeafe.premiumproject.examly.io"
  
   constructor(private httpclient : HttpClient) { }
  
@@ -36,7 +36,7 @@ export class AdminService {
 
 
   getTeams(): Observable<Team[]> {
-    return this.httpclient.get<Team[]>(`${this.url}/teams`);
+    return this.httpclient.get<Team[]>(`${this.url2}/ShowTeams`);
   }
 
   createTeam(newTeam: Team): Observable<Team> {
