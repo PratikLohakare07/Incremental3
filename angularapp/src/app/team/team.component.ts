@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { AdminService } from '../services/admin.service';
-import { Team } from 'src/models/team.model';
+import { Team } from 'src/model/team.model';
 import { Router } from '@angular/router';
 @Component({
   selector: 'app-team',

@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { Player } from '../../models/player.model';
+import { Player } from '../../model/player.model';
 import { AdminService } from '../services/admin.service';
  
 @Component({

@@ -1,29 +1,32 @@
 import { Component, OnInit } from '@angular/core';
-import { AdminService } from '../services/admin.service';
-import { Router } from '@angular/router';
-import { Player } from '../../models/player.model';
- 
+import { IPlayer } from '../model/iplayer';
+import { TeamServiceService } from '../services/team-service.service';
+import { ActivatedRoute, Router } from '@angular/router';
+
 @Component({
   selector: 'app-add-player',
   templateUrl: './add-player.component.html',
   styleUrls: ['./add-player.component.css']
 })
 export class AddPlayerComponent implements OnInit {
-  playerdata: Player= {id:0,name:'',age:0,category:'',biddingPrice:0}
-  // moviedata: IMovie = { id: 0, name: '',  yearrelease: 0 ,rating: 0}
- 
-  constructor(private ms:AdminService,private route:Router) { }
- 
-  saveData(player:Player):void{
-    this.playerdata=player
-    this.ms.addPlayer(this.playerdata).subscribe(
-      ()=>{
-      alert("Player Added")
-      this.route.navigate(['/ShowPlayers'])
-      }
-    )
+  playerdetail : IPlayer = {id : 0, teamid : 0, name : '', age : 0, category : '', biddingprice : 0}
+  showdata : any[] = []
+
+  constructor(private ms : TeamServiceService, private router : Router, private ar : ActivatedRoute) { }
+
+  saveData(player : IPlayer) : void {
+    this.playerdetail = player
+    this.ms.AddPlayer(this.playerdetail).subscribe(() => {
+      alert("Detail Added")
+      this.router.navigate(['/listteams'])
     }
- 
-  ngOnInit(): void {
+    )
   }
+
+  ngOnInit() {
+
+    this.ms.getTeams().subscribe(data => {this.showdata.push(...data)})
+
+  }
+
 }
