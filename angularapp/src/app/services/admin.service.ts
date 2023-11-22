@@ -36,7 +36,7 @@ export class AdminService {
 
 
   getTeams(): Observable<Team[]> {
-    const 
+    
     return this.httpclient.get<any[]>(this.url2+'/ShowTeams')
   }
 

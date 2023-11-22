@@ -16,16 +16,16 @@ namespace dotnetapp.Controllers
         {
             _context = context;
         }
-        // public IActionResult Login(User user)
-        // {
-        //     // var data = _context.Players.ToList();
-        //     return Ok();
-        // }
-        // public IActionResult Register(User user)
-        // {
-        //     // var data = _context.Players.ToList();
-        //     return Ok();
-        // }
+        public IActionResult Login(User user)
+        {
+            // var data = _context.Players.ToList();
+            return Ok();
+        }
+        public IActionResult Register(User user)
+        {
+            // var data = _context.Players.ToList();
+            return Ok();
+        }
  
        
     }
