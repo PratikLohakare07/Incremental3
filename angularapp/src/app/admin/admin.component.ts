@@ -9,7 +9,7 @@ import { Router } from '@angular/router';
 export class AdminComponent implements OnInit {
 
   constructor(private router : Router){
-    this.router.navigate(['/admin']);
+    this.router.navigate(['/home']);
   }
   ngOnInit(): void {
   }
