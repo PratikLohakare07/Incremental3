@@ -1,14 +1,14 @@
-﻿using System;
-using System.Collections;
-using System.Collections.Generic;
+﻿using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
+using Microsoft.EntityFrameworkCore;
  
 namespace dotnetapp.Models
 {
-    public class Team
-    {
-        public int TeamId {get;set;}
-        public string? TeamName{get;set;}
-        public virtual ICollection<Player>?Players {get;set;}
- 
-    }
-}
+        public class Team
+        {
+            [Key]
+            public int TeamId {get; set;}
+            public string TeamName {get; set;}
+            public ICollection<Player> ?Player {get; set;}
+        }
+} 

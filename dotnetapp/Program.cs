@@ -10,14 +10,13 @@ var builder = WebApplication.CreateBuilder(args);
 
 builder.Services.AddControllers();
 
-var connectionString = builder.Configuration.GetConnectionString("DevConnection");
-builder.Services.AddDbContext<ApplicationDbContext>(options=>options.UseSqlServer(connectionString));
+var conntectionString = builder.Configuration.GetConnectionString("mycon");
+builder.Services.AddDbContext<ApplicationDbContext>(options => options.UseSqlServer(conntectionString));
+// Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
 builder.Services.AddCors(
-    options =>
-    {
-         options.AddDefaultPolicy(
-        builder =>  
-        {
+    options => {
+        options.AddDefaultPolicy(
+        builder => {
             builder.AllowAnyHeader().AllowAnyMethod().AllowAnyOrigin();
         });
     });
@@ -32,12 +31,10 @@ if (app.Environment.IsDevelopment())
 {
     app.UseSwagger();
     app.UseSwaggerUI();
-    app.UseRouting();
-    app.UseCors();
 }
 
 app.UseHttpsRedirection();
-
+app.UseCors();
 app.UseAuthorization();
 
 app.MapControllers();
