@@ -1,8 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { TeamServiceService } from '../services/team-service.service';
 import { ActivatedRoute, Router } from '@angular/router';
-import { ITeam } from '../models/iteam';
-import { IPlayer } from '../models/iplayer';
+import { Team } from 'src/models/team.model';
+import { Player } from 'src/models/player.model';
 
 @Component({
   selector: 'app-find-team',
@@ -12,7 +12,7 @@ import { IPlayer } from '../models/iplayer';
 export class FindTeamComponent implements OnInit {
 
   id : number
-  teamdata : ITeam
+  teamdata : Team
   playerId : number
   playerdata : IPlayer[] = []
 
