@@ -10,7 +10,7 @@ import { ActivatedRoute, Router } from '@angular/router';
 })
 export class AddTeamComponent implements OnInit {
 
-  teamdetail : Team = {teamId : 0, teamName : '', maxixmunBudget : 0}
+  teamdetail : Team = {id:0, name: '',teamId : 0, teamName : '', maximumBudget : 0}
   showdata : any[] = []
 
   constructor(private ms : TeamServiceService, private router : Router, private ar : ActivatedRoute) { }
