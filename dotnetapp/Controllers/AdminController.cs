@@ -33,7 +33,7 @@ namespace dotnetapp.Controllers
 
         [HttpGet]
         [Route("ListPlayer")]
-        public IActionResult GetPlayer()
+        public IActionResult GetPlayers()
         {
             var data=from m in context.Players select m;
             return Ok(data);
@@ -99,7 +99,7 @@ namespace dotnetapp.Controllers
         }
         [HttpPut]
         [Route("EditTeam/{id}")]
-        public IActionResult PutPlayer(int id, Team Team)
+        public IActionResult Put(int id, Team Team)
         {
             if(ModelState.IsValid)
             {
@@ -116,7 +116,7 @@ namespace dotnetapp.Controllers
         }
         [HttpDelete]
         [Route("DeleteTeam/{id}")]
-        public IActionResult DeletePlayer(int id)
+        public IActionResult Delete(int id)
         {
   
                 var data=context.Teams.Find(id);
@@ -154,21 +154,21 @@ namespace dotnetapp.Controllers
         [Route("EditPlayer/{id}")]
         public IActionResult PutPlayer(int id, Player Player)
         {
-            if(ModelState.IsValid)
-            {
-                Player mv = context.Players.Find(id);
-                mv.Name = Player.Name;
-                mv.Age = Player.Age;
-                mv.Category = Player.Category;
-                mv.BiddingPrice = Player.BiddingPrice;
+            // if(ModelState.IsValid)
+            // {
+            //     Player mv = context.Players.Find(id);
+            //     mv.Name = Player.Name;
+            //     mv.Age = Player.Age;
+            //     mv.Category = Player.Category;
+            //     mv.BiddingPrice = Player.BiddingPrice;
                 context.SaveChanges();
                 return Ok();
                
  
  
  
-            }
-            return BadRequest("Unable to Edit Record");
+            // }
+            // return BadRequest("Unable to Edit Record");
         }
 
         [HttpDelete]
@@ -176,9 +176,9 @@ namespace dotnetapp.Controllers
         public IActionResult DeletePlayer(int id)
         {
   
-                var data=context.Players.Find(id);
-                context.Players.Remove(data);
-                context.SaveChanges();
+                // var data=context.Players.Find(id);
+                // context.Players.Remove(data);
+                // context.SaveChanges();
                 return Ok();
  
            

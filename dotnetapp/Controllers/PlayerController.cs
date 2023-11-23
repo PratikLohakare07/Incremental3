@@ -29,13 +29,13 @@
             [HttpPost]
             // [Route("UserLogin")]
 
-            public IActionResult Login() {
+            public IActionResult Login(User User) {
                 return Ok();
             }
 
             [HttpPost]
-            [Route("UserRegister")]
-            public IActionResult Register() {
+            // [Route("UserRegister")]
+            public IActionResult Register(User User) {
                 return Ok();
             }
 
