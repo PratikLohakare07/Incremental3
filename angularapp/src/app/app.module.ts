@@ -16,6 +16,11 @@ import { DeleteTeamComponent } from './delete-team/delete-team.component';
 import { EditPlayerComponent } from './edit-player/edit-player.component';
 import { ListPlayerComponent } from './list-player/list-player.component';
 import { DeletePlayerComponent } from './delete-player/delete-player.component';
+import { AdminComponent } from '../admin/admin.component';
+import { ErrorComponent } from '../error/error.component';
+import { OrganizerComponent } from '../organizer/organizer.component';
+import { RegistrationComponent } from '../registration/registration.component';
+import { NavbarComponent } from '../navbar/navbar.component';
 
 @NgModule({
   declarations: [
@@ -30,7 +35,12 @@ import { DeletePlayerComponent } from './delete-player/delete-player.component';
     DeleteTeamComponent,
     EditPlayerComponent,
     ListPlayerComponent,
-    DeletePlayerComponent
+    DeletePlayerComponent,
+    AdminComponent,
+    ErrorComponent,
+    OrganizerComponent,
+    RegistrationComponent,
+    NavbarComponent
   ],
   imports: [
     BrowserModule,

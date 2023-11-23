@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { IPlayer } from '../../models/iplayer';
+import { Player } from 'src/models/player.model';
 import { TeamServiceService } from '../services/team-service.service';
 
 @Component({
@@ -9,7 +9,7 @@ import { TeamServiceService } from '../services/team-service.service';
 })
 export class ListPlayerComponent implements OnInit {
 
-  playerdata : IPlayer[] = []
+  playerdata : Player[] = []
 
   constructor(private ms : TeamServiceService) {
       this.ms.getPlayers().subscribe(data => {this.playerdata.push(...data)})

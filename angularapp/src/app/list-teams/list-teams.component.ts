@@ -1,6 +1,6 @@
 import { Component, IterableDiffers, OnInit } from '@angular/core';
 import { TeamServiceService } from '../services/team-service.service';
-import { ITeam } from '../../models/iteam';
+import { Team } from 'src/models/team.model';
 
 @Component({
   selector: 'app-list-teams',
@@ -9,7 +9,7 @@ import { ITeam } from '../../models/iteam';
 })
 export class ListTeamsComponent implements OnInit {
 
-  teamdata : ITeam[] = []
+  teamdata : Team[] = []
 
   constructor(private ms : TeamServiceService) {
       this.ms.getTeams().subscribe(data => {this.teamdata.push(...data)})
