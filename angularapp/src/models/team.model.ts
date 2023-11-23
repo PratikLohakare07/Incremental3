@@ -1,5 +1,7 @@
 export interface Team {
-    teamId : number
-    teamName : string
+    id : number
+    name : string
+    teamId ?: number
+    
     maxixmunBudget : number
 }
