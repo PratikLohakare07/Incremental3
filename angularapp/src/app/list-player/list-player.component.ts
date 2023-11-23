@@ -15,7 +15,6 @@ export class ListPlayerComponent implements OnInit {
       this.ms.getPlayers().subscribe(data => {this.playerdata.push(...data)})
       console.log(this.playerdata)
   }
-
   ngOnInit(): void {
   }
 
