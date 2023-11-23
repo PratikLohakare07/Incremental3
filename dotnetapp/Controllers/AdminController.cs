@@ -99,7 +99,7 @@ namespace dotnetapp.Controllers
         }
         [HttpPut]
         [Route("EditTeam/{id}")]
-        public IActionResult Put(int id, Team Team)
+        public IActionResult PutPlayer(int id, Team Team)
         {
             if(ModelState.IsValid)
             {
@@ -116,7 +116,7 @@ namespace dotnetapp.Controllers
         }
         [HttpDelete]
         [Route("DeleteTeam/{id}")]
-        public IActionResult Delete(int id)
+        public IActionResult DeletePlayer(int id)
         {
   
                 var data=context.Teams.Find(id);

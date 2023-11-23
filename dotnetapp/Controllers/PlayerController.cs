@@ -19,7 +19,7 @@
 
             [HttpGet]
     
-            [Route("ListTeam")]
+            // [Route("ListTeam")]
             public IActionResult Get()
             {
                 var data=from m in context.Teams select m;
@@ -27,7 +27,7 @@
             }
 
             [HttpPost]
-            [Route("UserLogin")]
+            // [Route("UserLogin")]
 
             public IActionResult Login() {
                 return Ok();
