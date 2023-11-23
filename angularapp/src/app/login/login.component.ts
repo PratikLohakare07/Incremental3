@@ -9,28 +9,18 @@ import { FormGroup, FormsModule, Validators } from '@angular/forms';
   styleUrls: ['./login.component.css']
 })
 export class LoginComponent implements OnInit {
-  username : string;
-  password : string;
-  authService: any;
 
+  username: string;
+  password: string;
 
-  constructor(private ls : AuthService, private route :Router, private fm : FormGroup) { }
+  constructor(private authService: AuthService, private router: Router) {}
   ngOnInit(): void {
-    throw new Error('Method not implemented.');
+    
   }
-  // this.fm.group(
-  //   username : "Username Required", Validators.required
-  // )
-  login(){
-    this.ls.login(this.username,this.password).subscribe();
- 
-      // Replace this with actual authentication logic
-      const token = 'your-generated-jwt-token';
-  
-      // Store token in local storage
-      this.authService.setToken(token);
-    }
+
+  login() {
+    this.authService.login(this.username, this.password).subscribe(() => {
+     
+    });
   }
-  
- 
- 
+}
