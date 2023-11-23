@@ -14,6 +14,7 @@ import { ErrorComponent } from 'src/app/error/error.component';
 import { OrganizerComponent } from 'src/app/organizer/organizer.component';
 import { NavbarComponent } from 'src/app/navbar/navbar.component';
 import { LoginComponent } from '../login/login.component';
+import { PlayerComponent } from '../player/player.component';
 
 const routes: Routes = [
   {path : 'listteams', component : ListTeamsComponent},
@@ -25,11 +26,12 @@ const routes: Routes = [
   {path : 'listplayer', component : ListPlayerComponent},
   {path : 'editplayer/:id', component : EditPlayerComponent},
   {path : 'deleteplayer/:id', component : DeletePlayerComponent},
-  {path:'',component:AdminComponent},
-  {path:'',component:ErrorComponent},
-  {path:'',component:OrganizerComponent},
-  {path:'',component:LoginComponent},
-  {path:'',component:NavbarComponent}
+  {path:'admin',component:AdminComponent},
+  {path:'error',component:ErrorComponent},
+  {path:'organizer',component:OrganizerComponent},
+  {path:'login',component:LoginComponent},
+  {path:'navbar',component:NavbarComponent},
+  {path:'players',component:PlayerComponent}
 
 ];
 

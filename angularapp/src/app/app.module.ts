@@ -21,6 +21,8 @@ import { ErrorComponent } from './error/error.component';
 import { OrganizerComponent } from './organizer/organizer.component';
 import { RegistrationComponent } from './registration/registration.component';
 import { NavbarComponent } from './navbar/navbar.component';
+import { PlayerComponent } from './player/player.component';
+
 
 @NgModule({
   declarations: [
@@ -40,7 +42,9 @@ import { NavbarComponent } from './navbar/navbar.component';
     ErrorComponent,
     OrganizerComponent,
     RegistrationComponent,
-    NavbarComponent
+    NavbarComponent,
+    PlayerComponent,
+    PlayersComponent
   ],
   imports: [
     BrowserModule,
