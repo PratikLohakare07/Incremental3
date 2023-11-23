@@ -13,7 +13,7 @@ export class DeleteTeamComponent implements OnInit {
   constructor(private ms : TeamServiceService, private ar: ActivatedRoute, private router : Router) { }
 
   id : number
-  teamdetail : Team = {id:0, name:'',teamId : 0, teamName : '', maximumBudget : 0}
+  teamdetail : Team = {id:0, name:'', maximumBudget : 0}
 
   ngOnInit() {
     const tid = this.ar.snapshot.paramMap.get('id')

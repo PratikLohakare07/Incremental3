@@ -12,7 +12,7 @@ export class EditTeamComponent implements OnInit {
 
   constructor(private ms : TeamServiceService, private ar : ActivatedRoute, private router : Router) { }
 
-  teamdetail : Team = {id:0,name:'', teamId : 0, teamName : '', maximumBudget : 0}
+  teamdetail : Team = {id:0,name:'',  maximumBudget : 0}
   id : number
 
   ngOnInit() {

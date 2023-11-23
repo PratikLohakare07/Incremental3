@@ -43,8 +43,8 @@ import { PlayerComponent } from './player/player.component';
     OrganizerComponent,
     RegistrationComponent,
     NavbarComponent,
-    PlayerComponent,
-    PlayersComponent
+    PlayerComponent
+
   ],
   imports: [
     BrowserModule,

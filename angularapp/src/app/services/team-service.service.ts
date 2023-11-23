@@ -59,11 +59,11 @@ export class TeamServiceService {
   }
 
   EditTeam(team : Team) : Observable<Team> {
-    return this.httpclient.put<Team>(this.url + '/EditTeam/' + team.teamId, team, this.httpOptions)
+    return this.httpclient.put<Team>(this.url + '/EditTeam/' + team.id, team, this.httpOptions)
   }
 
   DeleteTeam(team : Team) : Observable<Team> {
-    return this.httpclient.delete<Team>(this.url + '/DeleteTeam/' + team.teamId, this.httpOptions)
+    return this.httpclient.delete<Team>(this.url + '/DeleteTeam/' + team.id, this.httpOptions)
   }
 
 

@@ -15,16 +15,19 @@ export class ListTeamsComponent implements OnInit {
       this.ms.getTeams().subscribe(data => {this.teamdata.push(...data)})
       console.log(this.teamdata)
   }
+  ngOnInit(): void {
+    this.getTeams();
+  }
   getTeams(): void {
-    this.teamService.getTeams().subscribe(
+    this.ms.getTeams().subscribe(
       (teams) => {
-        this.teams = teams;
+        this.teamdata = teams;
       },
       (error) => {
         console.error('Error retrieving teams:', error);
       }
     );
-  ngOnInit(): void {
-  }
-
+ 
+}
+ 
 }
