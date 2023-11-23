@@ -1,16 +1,25 @@
-<form (ngSubmit)="register()">
-    <div>
-      <label for="username">Username:</label>
-      <input id="username" [(ngModel)]="username" name="username" required>
+<form [formGroup]="registrationForm" (ngSubmit)="register()">
+    <label for="username">Username:</label>
+    <input type="text" id="username" formControlName="username">
+    <div *ngIf="registrationForm.get('username').hasError('required') && registrationForm.get('username').touched">
+      Username is required.
     </div>
-    <div>
-      <label for="password">Password:</label>
-      <input id="password" [(ngModel)]="password" name="password" type="password" required>
+  
+    <label for="password">Password:</label>
+    <input type="password" id="password" formControlName="password">
+    <div *ngIf="registrationForm.get('password').hasError('required') && registrationForm.get('password').touched">
+      Password is required.
     </div>
-    <div>
-      <label for="confirmPassword">Confirm Password:</label>
-      <input id="confirmPassword" [(ngModel)]="confirmPassword" name="confirmPassword" type="password" required>
+    <div *ngIf="registrationForm.get('password').hasError('pattern') && registrationForm.get('password').touched">
+        weakpassword
     </div>
-    <div class="error-message" *ngIf="errorMessage">{{ errorMessage }}</div>
+  
+    <label for="confirmPassword">Confirm Password:</label>
+    <input type="password" id="confirmPassword" formControlName="confirmPassword">
+    <div *ngIf="registrationForm.get('confirmPassword').hasError('required') && registrationForm.get('confirmPassword').touched">
+      
+    </div>
+  
     <button type="submit">Register</button>
   </form>
+  

@@ -11,14 +11,22 @@ export class PlayerComponent implements OnInit {
   constructor() { }
 
   ngOnInit(): void {
+    // Initialize players data (you might fetch this from a service or API)
+    this.players = [
+      { id: 1, name: 'Player 1', age: 25, category: 'Category A', biddingPrice: 100 },
+      { id: 2, name: 'Player 2', age: 28, category: 'Category B', biddingPrice: 150 },
+     
+    ];
   }
+
   newPlayer: any = {};
 
-  editPlayer(players: any) {
-    // Implement edit player logic
+  editPlayer(players?: any) {
+    alert(`Editing player: ${players.name}`);
   }
 
-  deletePlayer(players: any) {
-    // Implement delete player logic
+  deletePlayer(players?: any) {
+    
+    alert(`Deleting player: ${players.name}`);
   }
 }
